@@ -18,7 +18,7 @@ jobs:
       - run:
           name: spectacles sql
           command: |
-            spectacles sql --project jaffle_shop --branch $CIRCLE_BRANCH --batch -v
+            spectacles sql --project jaffle_shop --branch $CIRCLE_BRANCH --mode batch -v
             
 workflows:
   version: 2
