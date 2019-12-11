@@ -1,8 +1,10 @@
 view: dim_customers {
   sql_table_name: analytics.dim_customers ;;
+  label: "Customers"
 
   dimension: customer_id {
     type: number
+    primary_key: yes
     sql: ${TABLE}.customer_id ;;
   }
 
@@ -46,7 +48,8 @@ view: dim_customers {
     sql: ${TABLE}.number_of_orders ;;
   }
 
-  measure: count {
+  measure: count_customers {
+    label: "Number of Customers"
     type: count
     drill_fields: []
   }
