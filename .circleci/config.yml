@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/python:3.7.0
+
+    steps:
+      - checkout
+
+      - run:
+          name: install spectacles
+          command: |
+            sudo pip3 install spectacles
+      - run:
+          name: spectacles connect
+          command: |
+            spectacles connect -v
+      - run:
+          name: spectacles sql
+          command: |
+            spectacles sql --project jaffle_shop --branch $CIRCLE_BRANCH --batch -v
+            
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
