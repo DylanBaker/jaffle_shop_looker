@@ -1,5 +1,6 @@
 view: fct_orders {
   sql_table_name: analytics.fct_orders ;;
+  label: "Orders"
 
   dimension: amount {
     type: number
@@ -7,26 +8,31 @@ view: fct_orders {
   }
 
   dimension: bank_transfer_amount {
+    group_label: "Payment Type Amounts"
     type: number
     sql: ${TABLE}.bank_transfer_amount ;;
   }
 
   dimension: coupon_amount {
+    group_label: "Payment Type Amounts"
     type: number
     sql: ${TABLE}.coupon_amount ;;
   }
 
   dimension: credit_card_amount {
+    group_label: "Payment Type Amounts"
     type: number
     sql: ${TABLE}.credit_card_amount ;;
   }
 
   dimension: customer_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.customer_id ;;
   }
 
   dimension: gift_card_amount {
+    group_label: "Payment Type Amounts"
     type: number
     sql: ${TABLE}.gift_card_amount ;;
   }
@@ -56,7 +62,8 @@ view: fct_orders {
     sql: ${TABLE}.status ;;
   }
 
-  measure: count {
+  measure: count_orders {
+    label: "Number of Orders"
     type: count
     drill_fields: []
   }
