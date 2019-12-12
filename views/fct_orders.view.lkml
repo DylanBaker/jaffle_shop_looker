@@ -67,4 +67,9 @@ view: fct_orders {
     type: count
     drill_fields: []
   }
+
+  measure: average_order_amount {
+    type: average
+    sql: ${amount} ;;
+  }
 }
