@@ -4,7 +4,7 @@ view: fct_orders {
 
   dimension: amount {
     type: number
-    sql: ${TABLE}.amount ;;
+    sql: ${TABLE}.amount_error ;;
   }
 
   dimension: bank_transfer_amount {
