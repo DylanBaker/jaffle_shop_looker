@@ -4,7 +4,7 @@ view: fct_orders {
 
   dimension: amount {
     type: number
-    sql: ${TABLE}.amount ;;
+    sql: ${TABLE}.amount_error ;;
   }
 
   dimension: bank_transfer_amount {
@@ -66,5 +66,10 @@ view: fct_orders {
     label: "Number of Orders"
     type: count
     drill_fields: []
+  }
+
+  measure: average_order_amount {
+    type: average
+    sql: ${amount} ;;
   }
 }
