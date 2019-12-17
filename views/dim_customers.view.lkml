@@ -8,16 +8,6 @@ view: dim_customers {
     sql: ${TABLE}.customer_id ;;
   }
 
-  dimension: first_name {
-    type: string
-    sql: ${TABLE}.first_name ;;
-  }
-
-  dimension: last_name {
-    type: string
-    sql: ${TABLE}.first_name ;;
-  }
-
   dimension: customer_lifetime_value {
     type: number
     sql: ${TABLE}.customer_lifetime_value ;;
