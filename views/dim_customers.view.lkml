@@ -45,7 +45,7 @@ view: dim_customers {
 
   dimension: number_of_orders {
     type: number
-    sql: ${TABLE}.number_of_orders ;;
+    sql: ${TABLE}.numbers_of_orders ;;
   }
 
   measure: count_customers {
