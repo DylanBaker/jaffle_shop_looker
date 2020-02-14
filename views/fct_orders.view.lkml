@@ -68,7 +68,7 @@ view: fct_orders {
     drill_fields: []
   }
 
-  measure: average_order_value {
+  measure: average_order_amount {
     type: average
     sql: ${amount} ;;
   }
