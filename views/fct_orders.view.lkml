@@ -10,7 +10,7 @@ view: fct_orders {
   dimension: bank_transfer_amount {
     group_label: "Payment Type Amounts"
     type: number
-    sql: ${TABLE}.bank_transfer_amount ;;
+    sql: ${TABLE}.bank_transfer_amounts ;;
   }
 
   dimension: coupon_amount {

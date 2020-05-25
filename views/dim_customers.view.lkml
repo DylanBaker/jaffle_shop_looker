@@ -13,6 +13,11 @@ view: dim_customers {
     sql: ${TABLE}.customer_lifetime_value ;;
   }
 
+  dimension: customer_lifetime_value_x_1k {
+    type: number
+    sql: ${customer_lifetime_value} * 100 ;;
+  }
+
   dimension_group: first_order {
     type: time
     timeframes: [
