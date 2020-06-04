@@ -10,7 +10,7 @@ view: dim_customers {
 
   dimension: customer_lifetime_value {
     type: number
-    sql: ${TABLE}.customer_lifetime_value ;;
+    sql: ${TABLE}.not_so_customer_lifetime_value ;;
   }
 
   dimension_group: first_order {
